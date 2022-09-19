@@ -19,7 +19,7 @@ const Navbar = () => {
   `;
 
   return (
-    <nav className="flex h-14 items-center mx-auto mx-7">
+    <nav className="fixed top-0 flex h-14 items-center mx-auto px-7 z-10 bg-white w-full">
       <a href="#" className="mr-5">
         <img src="assets/logo.png" alt="" className="h-5" />
       </a>

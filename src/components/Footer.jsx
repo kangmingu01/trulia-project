@@ -6,7 +6,7 @@ const Footer = () => {
     h-2
   `;
   return (
-    <footer className="max-w-[960px] mx-auto">
+    <footer className="max-w-[960px] mx-auto mx-4">
       <div className="flex gap-16 pb-6">
         <div>
           <h2 className="font-bold">

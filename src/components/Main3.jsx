@@ -1,57 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { AiOutlineSearch } from "react-icons/ai";
+// import { img1 } from "../../public/assets/BuyAHome.svg";
 
 const Main3 = () => {
+  // const [icon, setIcon] = useState([img1, 1]);
+
+  const [icons] = useState([
+    "assets/BuyAHome.svg",
+    "assets/RentAHome.svg",
+    "assets/Neighborhoods.svg",
+  ]);
+  const [iconsDescript] = useState([
+    "With over 1 million+ homes for sale available on the website, Trulia can match you with a house you will want to call home.",
+    "With 35+ filters and custom keyword search, Trulia can help you easily find a home or apartment for rent that you'll love.",
+    "With more neighborhood insights than any other real estate website, we've captured the color and diversity of communities.",
+  ]);
+  const [btnIcons] = useState(["Find a Home", "Find a rental", "Learn more"]);
+
   return (
+    // 동적인 UI 만드는 법
+
     <div className="text-center">
       <h2 className="text-4xl font-bold">See how Trulia can help</h2>
       <div className="flex justify-center items-center place-items-center mb-10">
-        <div className="w-[300px] mx-4">
-          <img
-            src="assets/BuyAHome.svg"
-            alt="#"
-            className="w-[128px] mx-auto"
-          />
-          <h3 className="text-2xl">Buy a home</h3>
-          <p className="w-[250px]">
-            With over 1 million+ homes for sale available on the website, Trulia
-            can match you with a house you will want to call home.
-          </p>
-          <button className="bg-teal-600 w-[180px] text-white p-2 mt-2 rounded-lg">
-            Find a home
-          </button>
-        </div>
-        <div className="w-[300px]  mx-4">
-          <img
-            src="assets/RentAHome.svg"
-            alt="#"
-            className="w-[128px] mx-auto"
-          />
-          <h3 className="text-2xl">Buy a home</h3>
-          <p className="w-[250px]">
-            With over 1 million+ homes for sale available on the website, Trulia
-            can match you with a house you will want to call home.
-          </p>
-          <button className="bg-teal-600 w-[180px] text-white p-2 mt-2 rounded-lg">
-            Find a home
-          </button>
-        </div>
-        <div className="w-[300px]  mx-4">
-          <img
-            src="assets/Neighborhoods.svg"
-            alt="#"
-            className="w-[128px] mx-auto"
-          />
-          <h3 className="text-2xl">Buy a home</h3>
-          <p className="w-[250px]">
-            With over 1 million+ homes for sale available on the website, Trulia
-            can match you with a house you will want to call home.
-          </p>
-          <button className="bg-teal-600 w-[180px] text-white p-2 mt-2 rounded-lg">
-            Find a home
-          </button>
-        </div>
+        {icons.map((icons, i) => {
+          return (
+            <div className="w-[300px] mx-4" key={i}>
+              <img src={icons} alt="#" className="w-[128px] mx-auto" />
+              <h3 className="text-2xl">Buy a home</h3>
+              <p className="w-[260px] mx-auto">{iconsDescript[i]}</p>
+              <button className="bg-teal-600 w-[180px] text-white p-2 mt-2 rounded-lg">
+                {btnIcons[i]}
+              </button>
+            </div>
+          );
+        })}
       </div>
 
       <div className="p-7 max-w-[960px] mx-auto">
