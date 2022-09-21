@@ -6,13 +6,13 @@ const Footer = () => {
     h-2
   `;
   return (
-    <footer className="max-w-[960px] mx-auto mx-4">
-      <div className="flex gap-16 pb-6">
+    <footer className="max-w-[960px] mx-auto mt-20 lg:mx-4">
+      <div className="flex md:flex-col gap-16 pb-6">
         <div>
           <h2 className="font-bold">
             <a href="#">Real Estate Markets</a>
           </h2>
-          <ul>
+          <ul className="md:flex md:gap-x-5">
             <li className="text-sm">
               <a href="">Alaska Real Estate</a>
             </li>
@@ -37,7 +37,7 @@ const Footer = () => {
           <h2 className="font-bold">
             <a href="#">Real Estate Markets</a>
           </h2>
-          <ul>
+          <ul className="md:flex md:gap-x-5">
             <li className="text-sm">
               <a href="">Alaska Real Estate</a>
             </li>
@@ -62,7 +62,7 @@ const Footer = () => {
           <h2 className="font-bold">
             <a href="#">Real Estate Markets</a>
           </h2>
-          <ul>
+          <ul className="md:flex md:gap-x-5">
             <li className="text-sm">
               <a href="">Alaska Real Estate</a>
             </li>
@@ -87,7 +87,7 @@ const Footer = () => {
           <h2 className="font-bold">
             <a href="#">Real Estate Markets</a>
           </h2>
-          <ul>
+          <ul className="md:flex md:gap-x-5">
             <li className="text-sm">
               <a href="">Alaska Real Estate</a>
             </li>

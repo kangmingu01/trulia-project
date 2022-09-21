@@ -19,12 +19,12 @@ const Navbar = () => {
   `;
 
   return (
-    <nav className="fixed top-0 flex h-14 items-center mx-auto px-7 z-10 bg-white w-full">
+    <nav className="fixed top-0 flex h-14 items-center mx-auto px-7 z-10 bg-white w-full lg:justify-between">
       <a href="#" className="mr-5">
         <img src="assets/logo.png" alt="" className="h-5" />
       </a>
 
-      <ul className="flex items-center">
+      <ul className="flex items-center lg:hidden">
         <NavbarLi>
           <a href="#">Rent</a>
         </NavbarLi>
@@ -35,7 +35,7 @@ const Navbar = () => {
           <a href="#">Buy</a>
         </NavbarLi>
       </ul>
-      <ul className="flex items-center ml-auto">
+      <ul className="flex items-center ml-auto lg:hidden">
         <NavbarLi className="mr-1">
           <a href="#">Saved Home</a>
         </NavbarLi>
@@ -46,6 +46,7 @@ const Navbar = () => {
           <a href="#">Sign up or Log in</a>
         </NavbarLi>
       </ul>
+
       <div onClick={handleNav}>
         {!nav ? (
           <AiOutlineClose size={23} className=" text-white" />

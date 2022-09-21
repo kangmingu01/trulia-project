@@ -1,37 +1,55 @@
 import React, { useState } from "react";
 
 import { AiOutlineSearch } from "react-icons/ai";
-// import { img1 } from "../../public/assets/BuyAHome.svg";
 
 const Main3 = () => {
-  // const [icon, setIcon] = useState([img1, 1]);
+  const [input, setInput] = useState("");
 
-  const [icons] = useState([
-    "assets/BuyAHome.svg",
-    "assets/RentAHome.svg",
-    "assets/Neighborhoods.svg",
-  ]);
-  const [iconsDescript] = useState([
-    "With over 1 million+ homes for sale available on the website, Trulia can match you with a house you will want to call home.",
-    "With 35+ filters and custom keyword search, Trulia can help you easily find a home or apartment for rent that you'll love.",
-    "With more neighborhood insights than any other real estate website, we've captured the color and diversity of communities.",
-  ]);
-  const [btnIcons] = useState(["Find a Home", "Find a rental", "Learn more"]);
+  const inputChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  const cards = [
+    {
+      img: "assets/BuyAHome.svg",
+      descripton:
+        "With over 1 million+ homes for sale available on the website, Trulia can match you with a house you will want to call home.",
+      btn: "Find a Home",
+    },
+    {
+      img: "assets/RentAHome.svg",
+      descripton:
+        "With 35+ filters and custom keyword search, Trulia can help you easily find a home or apartment for rent that you'll love.",
+      btn: "Find a rental",
+    },
+    {
+      img: "assets/Neighborhoods.svg",
+      descripton:
+        "With more neighborhood insights than any other real estate website, we've captured the color and diversity of communities.",
+      btn: "Learn more",
+    },
+  ];
 
   return (
     // 동적인 UI 만드는 법
-
-    <div className="text-center">
-      <h2 className="text-4xl font-bold">See how Trulia can help</h2>
-      <div className="flex justify-center items-center place-items-center mb-10">
-        {icons.map((icons, i) => {
+    <div className="text-center mt-20 ">
+      <h2 className="text-4xl font-bold mx-auto md:max-w-[260px] ">
+        See how Trulia can help
+      </h2>
+      <div className="flex lg:justify-around justify-center  items-center place-items-center mb-10 md:flex-col">
+        {cards.map((cards, i) => {
           return (
-            <div className="w-[300px] mx-4" key={i}>
-              <img src={icons} alt="#" className="w-[128px] mx-auto" />
+            <div
+              className="w-[300px] mx-4 md:mt-6 lg:w-[225px] md:w-[255px]"
+              key={i}
+            >
+              <img src={cards.img} alt="#" className="w-[128px] mx-auto" />
               <h3 className="text-2xl">Buy a home</h3>
-              <p className="w-[260px] mx-auto">{iconsDescript[i]}</p>
+              <p className="w-[260px] lg:w-[225px] md:w-[255px] mx-auto">
+                {cards.descripton}
+              </p>
               <button className="bg-teal-600 w-[180px] text-white p-2 mt-2 rounded-lg">
-                {btnIcons[i]}
+                {cards.btn}
               </button>
             </div>
           );
@@ -45,6 +63,8 @@ const Main3 = () => {
             <input
               className="w-96 h-14 p-4 bg-slate-100 rounded-l-xl"
               type="text"
+              value={input}
+              onChange={inputChange}
               placeholder="Search for City, Neighborhood, Zip, Country, Scho"
             />
             <div
@@ -56,14 +76,15 @@ const Main3 = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row text-xl my-8 justify-center items-center py-8 h-8 text-blue-800 font-bold">
+
+      <div className="flex text-2xl gap-x-0.5 my-8 justify-center items-center text-blue-800 font-bold">
         <div>discover</div>
-        <img src="/assets/area.svg" alt="" className="w-8 " />
+        <img src="/assets/location.png" alt="" className="w-10 " />
         <div>a place</div>
-        <img src="/assets/house.svg" alt="" className="w-8" />
+        <img src="/assets/house.png" alt="" className="w-10" />
         <div>you'll love</div>
-        <img src="/assets/love.svg" alt="" className="w-8" />
-        to live
+        <img src="/assets/heart.png" alt="" className="w-10" />
+        <div>to live</div>
       </div>
     </div>
   );
