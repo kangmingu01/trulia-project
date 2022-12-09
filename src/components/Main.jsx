@@ -72,7 +72,7 @@ const Main = () => {
             className="bg-red-500 w-14 h-14 border-2 rounded-r-xl"
             type="submit"
           >
-            <AiOutlineSearch className="w-14 h-14 text-white" />
+            <AiOutlineSearch size={50} className="cursor-pointer text-white" />
           </div>
         </div>
       </div>
