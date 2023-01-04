@@ -2,7 +2,7 @@
 - 제작기간: 2022.9.6 - 2022.9.21
 - 작업: 프론트(1명(개인))
 - 사용 기술: React.js
-- Framework: Tailwind CSS
+- Framework: Tailwind CSS, react-icons
 
 <img width="1421" alt="스크린샷 2022-12-20 오후 4 47 58" src="https://user-images.githubusercontent.com/53555375/208611996-664935f6-8581-464c-903c-ab1d01f6c051.png">
 
